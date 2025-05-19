@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Serif, Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({subsets: ["latin"], variable: '--font-inter '});
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const ibmPlexSerif = IBM_Plex_Serif({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -11,10 +11,7 @@ const ibmPlexSerif = IBM_Plex_Serif({
 
 export const metadata: Metadata = {
   title: "Clyra",
-  description: "Clyra is a modern banking platform for all.",
-  icons: {
-    icon :'/icons/logo.svg'
-  }
+  description: "Clyra is a modern banking platform for all",
 };
 
 export default function RootLayout({
@@ -24,11 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${ibmPlexSerif.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${inter.variable} ${ibmPlexSerif.variable} antialiased`}>{children}</body>
     </html>
   );
 }
